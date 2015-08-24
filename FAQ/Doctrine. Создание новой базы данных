@@ -1,0 +1,31 @@
+doctrine:database:create
+
+Параметры подключения указаны в 
+# app/config/config.yml
+doctrine:
+    dbal:
+        driver:   "%database_driver%"
+        host:     "%database_host%"
+        dbname:   "%database_name%"
+        user:     "%database_user%"
+        password: "%database_password%"
+
+doctrine:
+    dbal:
+        driver:   pdo_mysql
+        host:     127.0.0.1
+        port:     "null"
+        dbname:   Task
+        user:     root
+        password: 
+        charset:  UTF8
+
+
+игнорируются параметры указанные 
+# app/config/parameters.yml
+parameters:
+    database_driver:    pdo_mysql
+    database_host:      localhost
+    database_name:      test_project
+    database_user:      root
+    database_password:  password

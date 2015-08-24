@@ -1,0 +1,23 @@
+https://knpuniversity.com/screencast/symfony2-ep1/bundles#play
+Generating the EventBundle
+
+For now run the generate:bundle command:
+
+$ php app/console generate:bundle
+
+Важно - название бандла должно обязательно содержать слово "Bundle"
+
+For the bundle namespace, type Yoda/EventBundle. 
+A bundle namespace always has two parts: a vendor name and a name describing the bundle. 
+In honor of the Jedi master, we’ll use “Yoda” for the first part and EventBundle for the second. 
+Unless you also work for Yoda, you’ll probably use your company or project name instead. 
+Keep these as short as possible to save typing later.
+
+Next, it wants a nickname for our bundle. We’re going to be writing this a lot, and lets face it, we’re busy people. 
+So, let’s choose something short, like EventBundle. The only rule is that this ends with Bundle.
+
+Use the target default directory, but choose yml as the configuration format. 
+You’ll just have to trust me on this part - we’ll check out the annotation configuration format later.
+
+For the rest of the questions, just hit the enter key wildly. 
+And once the console-gnomes are finished, we have a brand new bundle.
