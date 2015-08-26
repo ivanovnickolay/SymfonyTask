@@ -1,0 +1,54 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <script></script>
+    <h1>Список задач </h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Название задачи </th>
+                <th>Начало задачи</th>
+                <th>Окончание задачи</th>
+                <th>Описание </th>
+                <th>Важность</th>
+                <th>Задача закончена </th>
+                <th>Действие </th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('task_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.nametask }}</td>
+                <td>{% if entity.begintask %}{{ entity.begintask|date('d-m-Y') }}{% endif %}</td>
+                <td>{% if entity.endtask %}{{ entity.endtask|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ entity.description }}</td>
+                <td>{{ entity.vajnoct }}</td>
+                <td>{{ entity.final }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('task_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('task_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('task_new') }}">
+                Create a new entry
+            </a>
+        </li>
+      <li><button type="button" class="btn btn-primary" onclick="AddLink('{{ path('task_new') }}')" >Создать новую задачу</button> </li>
+    </ul>
+    
+    {% endblock %}

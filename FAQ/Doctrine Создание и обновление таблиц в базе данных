@@ -1,0 +1,13 @@
+app\console" "--ansi" "doctrine:schema:create"
+
+Создает первоначальную структуру таблиц в база данных 
+
+$ php app/console doctrine:schema:update --force
+
+Обновляет структуру таблиц в базе данных 
+
+ATTENTION: This operation should not be executed in a production environment.
+
+Creating database schema...
+Database schema created successfully!
+Готово.

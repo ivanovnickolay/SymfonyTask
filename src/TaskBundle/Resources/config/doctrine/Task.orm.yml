@@ -1,7 +1,7 @@
-Home\TaskBundle\Entity\Task:
+TaskBundle\Entity\Task:
     type: entity
     table: null
-    repositoryClass: Home\TaskBundle\Entity\TaskRepository
+    repositoryClass: TaskBundle\Entity\TaskRepository
     id:
         id:
             type: integer

@@ -1,7 +1,7 @@
-Home\TaskBundle\Entity\Subtask:
+TaskBundle\Entity\Subtask:
    type: entity
    table: Subtask
-   repositoryClass: Home\TaskBundle\Entity\SubtaskRepository
+   repositoryClass: TaskBundle\Entity\SubtaskRepository
    id:
        id:
              type: integer

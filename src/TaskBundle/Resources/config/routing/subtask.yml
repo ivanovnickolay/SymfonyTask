@@ -1,0 +1,30 @@
+subtask:
+    path:     /
+    defaults: { _controller: "TaskBundle:Subtask:index" }
+
+subtask_show:
+    path:     /{id}/show
+    defaults: { _controller: "TaskBundle:Subtask:show" }
+
+subtask_new:
+    path:     /new
+    defaults: { _controller: "TaskBundle:Subtask:new" }
+
+subtask_create:
+    path:     /create
+    defaults: { _controller: "TaskBundle:Subtask:create" }
+    methods:  POST
+
+subtask_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "TaskBundle:Subtask:edit" }
+
+subtask_update:
+    path:     /{id}/update
+    defaults: { _controller: "TaskBundle:Subtask:update" }
+    methods:  [POST, PUT]
+
+subtask_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "TaskBundle:Subtask:delete" }
+    methods:  [POST, DELETE]

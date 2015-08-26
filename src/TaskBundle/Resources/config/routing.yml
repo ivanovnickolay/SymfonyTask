@@ -1,3 +1,7 @@
+task_task:
+    resource: "@TaskBundle/Resources/config/routing/task.yml"
+    prefix:   /task
+
 task_homepage:
-    path:     /hello/{name}
-    defaults: { _controller: TaskBundle:Default:index }
+    path:     /
+    defaults: { _controller: TaskBundle:Task:Index }

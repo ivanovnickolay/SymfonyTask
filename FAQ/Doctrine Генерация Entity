@@ -1,0 +1,20 @@
+app\console" "--ansi" "doctrine:generate:entities" "TaskBundle"
+
+Генерирует все сущности которые "лежат" в scr/TaskBundle/Resourse/Config/Doctrine 
+
+Generating entities for bundle "TaskBundle"
+  > backing up Category.php to Category.php~
+  > generating TaskBundle\Entity\Category
+  > backing up Subtask.php to Subtask.php~
+  > generating TaskBundle\Entity\Subtask
+  > backing up Task.php to Task.php~
+  > generating TaskBundle\Entity\Task
+Готово.
+
+More about doctrine:generate:entities
+
+With the doctrine:generate:entities command you can:
+
+generate getters and setters;
+generate repository classes configured with the @ORM\Entity(repositoryClass="...") annotation;
+generate the appropriate constructor for 1:n and n:m relations.
