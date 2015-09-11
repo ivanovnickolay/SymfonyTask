@@ -192,4 +192,16 @@ class Subtask
     {
         return $this->Task;
     }
+
+    /**
+     * Проверка даты окончания под проекта
+     * она не должна быть больше даты окочания осногого проекта
+     *
+     * @return bool
+     */
+    public function isValidDate()
+    {
+        $datetask=$this->Task->GetEndTask();
+        return $this->end > $datetask ? false : true;
+    }
 }

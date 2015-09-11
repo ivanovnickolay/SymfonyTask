@@ -15,16 +15,21 @@ class Task
     private $id;
 
     /**
+     * Наименование задачи
      * @var string
      */
     private $name_task;
 
     /**
+     * Дата начала задачи
+     * не может быть больше $end_task;
      * @var \DateTime
      */
     private $begin_task;
 
     /**
+     * Дата окончания задачи
+     * не может быть меньше $begin_task
      * @var \DateTime
      */
     private $end_task;
@@ -49,7 +54,7 @@ class Task
 
     /**
      * @var \Doctrine\Common\Collections\Collection
-     * ссылка на подзадачи данный задачи в табице Subtask
+     * ссылка на подзадачи данный задачи в таблице Subtask
      */
     private $Subtask;
 
@@ -269,5 +274,16 @@ class Task
     public function getCategory()
     {
         return $this->Category;
+    }
+
+    /**
+     * Проверка дат на соответствие
+     * Дата окочания задачи должна быть больше и ли равна дате началы задачи
+     * правило валидации прописано в src\TaskBundle\Resources\config\validation.yml
+     * @return bool
+     */
+    public function iaValidDate()
+    {
+        return $this->begin_task<=$this->end_task;
     }
 }
