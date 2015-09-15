@@ -282,7 +282,7 @@ class Task
      * правило валидации прописано в src\TaskBundle\Resources\config\validation.yml
      * @return bool
      */
-    public function iaValidDate()
+    public function isValidDate()
     {
         return $this->begin_task<=$this->end_task;
     }
